@@ -7,7 +7,7 @@
     }
 
     .chatbar {
-      background: tomato;
+      background: linear-gradient(-45deg, rgb(20, 14, 14), rgb(48, 120, 166), rgb(46, 155, 208), rgb(236, 215, 171));
       border-top: 1px solid black;
       bottom: 0;
       display: flex;
@@ -29,40 +29,48 @@
 
     .chatbar-message {
       flex: 8;
+      border-radius: 10px;
     }
 
     .chatbar-username {
       flex: 2;
+      border-radius: 10px;
     }
 
-    .message {
+    .message,
+    .notification {
       display: flex;
-      padding: 5px;
-    }
-
-    .message.system {
-      font-style: italic;
-      padding: 5px 20px;
+      padding: 6px;
     }
 
     .message-content,
-    .message-username {
+    .message-username,
+    .notification-content {
       overflow: hidden;
       margin: 5px;
       padding: 0 10px;
     }
 
     .message-content {
+      display: inline-block;
       flex: 8;
+      padding: 0.5em;
+      border-radius: 0.25em;
+      color: white;
     }
 
+    .notification-content {
+      text-align: center;
+      font-style: italic;
+      padding: 5px 20px;
+    }
     .message-username {
       flex: 2;
       font-weight: 700;
     }
 
     .navbar {
-      background: tomato;
+      background: linear-gradient(-45deg, rgb(20, 14, 14), rgb(48, 120, 166), rgb(46, 155, 208), rgb(236, 215, 171));
       border-bottom: 1px solid black;
       height: 60px;
       left: 0;
@@ -72,6 +80,10 @@
       top: 0;
     }
 
+    .navbar-user {
+      font-style: italic;
+      color: white;
+    }
     .navbar-brand {
       color: inherit;
       display: block;
@@ -82,4 +94,24 @@
       line-height: 60px;
       padding: 0 10px;
       text-decoration: none;
+    }
+
+    .navbar-user{
+      float: right;
+      line-height: 60px;
+      padding: 0 10px;
+    }
+
+    input[type=text] {
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      border: 1px solid #DDDDDD;
+    }
+
+    input[type=text]:focus {
+      box-shadow: 0 0 5px purple;
+      border: 1px solid purple;
     }
